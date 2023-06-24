@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.0",
+    "info": {
+      "title": "Sample API",
+      "description": "A sample API for testing Swagger UI",
+      "version": "1.0.0"
+  },
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/answer": {
+      "post": {
+        "summary": "Parses PDF, creates and runs prompt on GPT 3.5 and returns the answer.",
+        "consumes": "multipart/form-data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pdf_file": {
+                    "name": "pdffile",
+                    "type": "file",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
