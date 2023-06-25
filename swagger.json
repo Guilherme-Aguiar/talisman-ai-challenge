@@ -1,8 +1,7 @@
 {
   "openapi": "3.0.0",
     "info": {
-      "title": "Sample API",
-      "description": "A sample API for testing Swagger UI",
+      "title": "Talisman AI Challenge",
       "version": "1.0.0"
   },
   "basePath": "/",

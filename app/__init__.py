@@ -6,7 +6,7 @@ from app.controller import ParsePDFAndRunPrompt
 
 from flask_swagger_ui import get_swaggerui_blueprint
 
-def create_app(config_name):
+def create_app(config_name='dev'):
     app = Flask(__name__)
     # Sets file upload limit 16MB
     app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
@@ -24,7 +24,7 @@ def create_app(config_name):
 
     # Configure Swagger UI
     SWAGGER_URL = '/swagger'
-    API_URL = 'http://127.0.0.1:5000/swagger.json'
+    API_URL = 'http://localhost:5000/swagger.json'
     swaggerui_blueprint = get_swaggerui_blueprint(
         SWAGGER_URL,
         API_URL,
