@@ -27,12 +27,12 @@ def create_app():
 
     # Configure Swagger UI
     SWAGGER_URL = '/swagger'
-    API_URL = f'http://{os.getenv("SWAGGER_HOST")}:5000/swagger.json'
+    API_URL = f'http://{os.getenv("SWAGGER_HOST")}:8000/swagger.json'
     swaggerui_blueprint = get_swaggerui_blueprint(
         SWAGGER_URL,
         API_URL,
         config={
-            'app_name': "Sample API"
+            'app_name': "Talisman AI Challenge"
         }
     )
     app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)

@@ -4,21 +4,10 @@
       "title": "Talisman AI Challenge",
       "version": "1.0.0"
   },
-  "basePath": "/",
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
   "paths": {
     "/answer": {
       "post": {
         "summary": "Parses PDF, creates and runs prompt on GPT 3.5 and returns the answer.",
-        "consumes": "multipart/form-data",
         "requestBody": {
           "required": true,
           "content": {
@@ -27,8 +16,7 @@
                 "type": "object",
                 "properties": {
                   "pdf_file": {
-                    "name": "pdffile",
-                    "type": "file",
+                    "type": "string",
                     "format": "binary"
                   }
                 }
@@ -38,15 +26,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful response.",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "answer": {
-                  "type": "object"
-                }
-              }
-            }
+            "description": "Successful response."
           }
         }
       }
