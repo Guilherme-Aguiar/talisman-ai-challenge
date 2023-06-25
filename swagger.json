@@ -15,7 +15,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "pdf_file": {
+                  "file": {
                     "type": "string",
                     "format": "binary"
                   }
