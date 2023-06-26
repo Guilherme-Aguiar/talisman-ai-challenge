@@ -6,9 +6,8 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
-    SECRET_KEY = os.getenv('SECRET_KEY', 'my_precious_secret_key')
-    DEBUG = False
-
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 class DevelopmentConfig(Config):
     DEBUG = True

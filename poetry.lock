@@ -181,6 +181,20 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -384,7 +398,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "e767d308d9e9ed62a16f06b97f502b27b6f61178809e48d17d0a47be28903a9f"
+content-hash = "7de4adfd12ab106390875d3ecb448065168c38a2fd06b6f3d2dc26ab9d5a1146"
 
 [metadata.files]
 aiohttp = []
@@ -403,6 +417,7 @@ flask-restful = []
 flask-script = []
 flask-swagger-ui = []
 frozenlist = []
+gunicorn = []
 idna = []
 itsdangerous = []
 jinja2 = []

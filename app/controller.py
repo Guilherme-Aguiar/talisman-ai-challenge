@@ -24,4 +24,4 @@ class ParsePDFAndRunPrompt(Resource):
 
     response = gpt_helpers.generate_openai_response(transformed_text_content)
     
-    return jsonify({'answer': response})
+    return jsonify({'answer': response, 'raw_prompt_text': transformed_text_content})
